@@ -16,7 +16,6 @@ server.register([inert, vision], (err) => {
   server.views({
     engines: { hbs: Handlebars },
     path: './src/views',
-    layout: 'index',
   });
 
   server.route(routes);
