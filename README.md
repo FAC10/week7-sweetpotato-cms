@@ -1,4 +1,4 @@
-# :sweet-potato: Sweet Potato CMS :sweet-potato:
+# :sweet_potato: Sweet Potato CMS :sweet_potato:
 [![Build Status](https://travis-ci.org/yvonne-liu/week7-sweetpotato-cms.svg?branch=master)](https://travis-ci.org/yvonne-liu/week7-sweetpotato-cms)
 ![codecov](https://codecov.io/gh/yvonne-liu/week7-sweetpotato-cms/branch/master/graph/badge.svg)
 
