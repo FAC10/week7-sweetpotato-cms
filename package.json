@@ -1,0 +1,42 @@
+{
+  "name": "week7-sweetpotato-cms",
+  "version": "1.0.0",
+  "description": "sweetpotato-cms",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/tests.js | tap-spec",
+    "start": "node src/server.js",
+    "devStart": "nodemon src/server",
+    "coverage": "istanbul cover tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvonne-liu/week7-sweetpotato-cms.git"
+  },
+  "author": "yvonne antonio martha zooey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yvonne-liu/week7-sweetpotato-cms/issues"
+  },
+  "homepage": "https://github.com/yvonne-liu/week7-sweetpotato-cms#readme",
+  "devDependencies": {
+    "codecov": "^2.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.11.0",
+    "shot": "^3.4.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "env2": "^2.1.1",
+    "pg": "^6.1.5",
+    "handlebars": "^4.0.6",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "vision": "^4.1.1",
+    "hapi-auth-cookie": "^6.1.1"
+  }
+}
