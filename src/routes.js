@@ -9,8 +9,11 @@ const home = {
 const loginPage = {
   method: 'GET',
   path: '/login-page',
-  handler: (req, reply) => {
-    reply.view('login-page');
+  config: {
+    auth: 'simple',
+    handler: (req, reply) => {
+      reply.view('login-page');
+    },
   },
 };
 

@@ -31,12 +31,14 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "env2": "^2.1.1",
-    "pg": "^6.1.5",
     "handlebars": "^4.0.6",
     "hapi": "^16.1.0",
+    "hapi-auth-basic": "^4.2.0",
+    "hapi-auth-cookie": "^6.1.1",
     "inert": "^4.1.0",
-    "vision": "^4.1.1",
-    "hapi-auth-cookie": "^6.1.1"
+    "pg": "^6.1.5",
+    "vision": "^4.1.1"
   }
 }
