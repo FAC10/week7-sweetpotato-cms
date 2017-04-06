@@ -35,6 +35,7 @@
     "env2": "^2.1.1",
     "handlebars": "^4.0.6",
     "hapi": "^16.1.0",
+    "hapi-auth-basic": "^4.2.0",
     "hapi-auth-cookie": "^6.1.1",
     "inert": "^4.1.0",
     "pg": "^6.1.5",
