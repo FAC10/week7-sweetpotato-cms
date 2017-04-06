@@ -19,10 +19,10 @@ CREATE TABLE posts (
 
 -- 1 TO MANY
 INSERT INTO users(username, password, isAdmin) VALUES
-('antonio', 'pwd1', TRUE),
-('martha', 'pwd2', TRUE),
-('yvonne','pwd3', TRUE),
-('zooey','pwd4', TRUE);
+('antonio', '$2a$10$MSfyTKDh/lppG0R.ztUtvubq3GYAjwZsZV3eQvHplk6xwF5vGCI3a', TRUE),
+('martha', '$2a$10$VHuVu//Ppx.Gd.dSo159E.H9KLjeHJzcDXHb.YQ3LphtHmP5n4Bl.', TRUE),
+('yvonne','$2a$10$6pspiF1JTETeWKCn9yqZwuqxrSeGK9EKveovqdZ75fiAKJLdSK5I.', TRUE),
+('zooey','$2a$10$vnXje.FHkOuk871dSnAWu.zpR25yPOdFrlQl3Bm9DrpH518N8EMN6', TRUE);
 -- 1 TO 1
 INSERT INTO posts(title, body, date, user_id) VALUES
 ('Lorem1', '111-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam magni maxime dicta ullam aut, sunt. Quidem veniam unde, minima, velit tempore odit voluptas alias, harum tenetur placeat animi, quaerat perspiciatis?','2017-04-01', 1),
