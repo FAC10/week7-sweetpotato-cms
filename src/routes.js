@@ -6,15 +6,30 @@ const home = {
   },
 };
 
-const loginPage = {
+const createPost = {
   method: 'GET',
-  path: '/login-page',
+  path: '/create-post',
   handler: (req, reply) => {
-    reply.view('login-page');
+    const username = req.payload.username;
+    const password = req.payload.password;
+    req.cookieAuth.set({ username });
+
+    reply.view('create-post', {
+      credentials: req.auth.credentials,
+    });
+  },
+};
+
+const authRoute = {
+  method: 'GET',
+  path: '/auth-only',
+  handler: (req, reply) => {
+    reply('You\'re not authenticated :(');
   },
 };
 
 module.exports = [
   home,
-  loginPage,
+  createPost,
+  authRoute,
 ];
