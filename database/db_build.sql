@@ -10,7 +10,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE posts (
-  post_id              serial          PRIMARY KEY,
+  post_id         serial          PRIMARY KEY,
   title           varchar(50)     NOT NULL,
   body            varchar(500)    NOT NULL,
   date            date            NOT NULL,

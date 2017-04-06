@@ -32,11 +32,12 @@
   },
   "dependencies": {
     "env2": "^2.1.1",
-    "pg": "^6.1.5",
     "handlebars": "^4.0.6",
     "hapi": "^16.1.0",
+    "hapi-auth-cookie": "^6.1.1",
     "inert": "^4.1.0",
-    "vision": "^4.1.1",
-    "hapi-auth-cookie": "^6.1.1"
+    "pg": "^6.1.5",
+    "url": "^0.11.0",
+    "vision": "^4.1.1"
   }
 }
