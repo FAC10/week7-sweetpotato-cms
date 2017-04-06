@@ -9,15 +9,24 @@ const home = {
 const createPost = {
   method: 'GET',
   path: '/create-post',
-  handler: (req, reply) => {
-    const username = req.payload.username;
-    const password = req.payload.password;
-    req.cookieAuth.set({ username });
-
-    reply.view('create-post', {
-      credentials: req.auth.credentials,
-    });
+  config: {
+    auth: 'simple',
+    handler: (req, reply) => {
+      console.log(req.auth.credentials, '<<<<<<<');
+      reply.view('create-post', {
+        credentials: req.auth.credentials,
+      });
+    },
   },
+  // handler: (req, reply) => {
+  //   const username = req.payload.username;
+  //   const password = req.payload.password;
+  //   req.cookieAuth.set({ username });
+  //
+  //   reply.view('create-post', {
+  //     credentials: req.auth.credentials,
+  //   });
+  // },
 };
 
 const authRoute = {
