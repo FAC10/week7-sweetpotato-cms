@@ -16,21 +16,20 @@ server.connection({
 server.register([inert, vision, hapiAuth, cookieAuth], (err) => {
   if (err) throw err;
 
-  // server.auth.strategy('base', 'cookie', 'optional', options);
+  const options = {
+    password: '12345678901234567890123456789012345678901234567890123456789012345678901234567890',
+    cookie: 'logged-in',
+    isSecure: false,
+    ttl: 24 * 60 * 60 * 1000,
+  };
 
-  server.auth.strategy('simple', 'basic', { validateFunc: validate });
+  server.auth.strategy('base', 'cookie', 'optional', options);
 
   server.views({
     engines: { hbs: Handlebars },
     path: './src/views',
   });
 
-  // const options = {
-  //   password: 'pwd1',
-  //   cookie: 'cookie-name',
-  //   isSecure: false,
-  //   ttl: 24 * 60 * 60 * 1000,
-  // };
 
   server.route(routes);
 });

@@ -7,6 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  Hello Zooey
+  {{#if credentials.username}}
+  <h1>Hi {{credentials.username}}</h1>
+  {{else}}
+  <h1>Hello person I don't konw</h1>
+  {{/if}}
+
+  <p>this is the bit where all the blog posts are, i promise they exist</p>
+
+
+
+
+
+  <a href='./create-post'>do a blog post for much win</a>
 </body>
 </html>
