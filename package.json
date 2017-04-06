@@ -31,6 +31,7 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "env2": "^2.1.1",
     "handlebars": "^4.0.6",
     "hapi": "^16.1.0",
