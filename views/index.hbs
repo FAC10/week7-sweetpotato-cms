@@ -1,0 +1,18 @@
+{{> header}}
+
+<div>
+  <div class="">
+    {{title}}
+    {{body}}
+    {{username}}
+  </div>
+  Most recent posts:
+  {{#each posts}}
+    {{> post-template}}
+  {{/each}}
+    <!-- {{#if data}}
+      <div>data.title</div>
+      <div>data.body</div>
+      <div>data.username</div>
+    {{/if}} -->
+  </div>

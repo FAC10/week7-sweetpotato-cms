@@ -1,0 +1,9 @@
+<header class="container header">
+    <h1 class="header-title">Welcome to Sweet Potato Blog</h1>
+    <span class="welcome-message">
+      Hello {{username}}
+      {{# isAdmin}}
+        {{user.role}}
+      {{/ isAdmin}}
+    </span>
+</header>
