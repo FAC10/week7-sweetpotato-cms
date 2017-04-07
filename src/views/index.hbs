@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
+
 <body>
-  {{#if credentials.username}}
-  <h1>Hi {{credentials.username}}</h1>
-  {{else}}
-  <h1>Hello person I don't konw</h1>
-  {{/if}}
+    {{#if credentials.username}}
+        <h1>Hi {{credentials.username}}</h1>
+    {{else}}
+        <h1>Hello person I don't konw</h1>
+    {{/if}}
 
-  <p>this is the bit where all the blog posts are, i promise they exist</p>
-
-
+    <p>this is the bit where all the blog posts are, i promise they exist</p>
 
 
 
-  <a href='./create-post'>do a blog post for much win</a>
-</br>
-<form action='/logout' method='GET'>
-<button type='submit'>logout</button>
-</form>
+
+
+    <a href='./create-post'>do a blog post for much win</a>
+    </br>
+    <form action='/logout' method='GET'>
+        <button type='submit'>logout</button>
+    </form>
 </body>
+
 </html>
