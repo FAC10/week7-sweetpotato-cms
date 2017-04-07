@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
+
 <body>
-<h1>Welcome {{credentials.username}}!</h1>
+    <h1>Welcome {{credentials.username}}!</h1>
 
-<form action='/post-blog' method='post'>
-  <label for="title">Post title:</label>
-      <input id="title" type="text" name="title" placeholder="My blog title" required>
-  <label for="body">Blog body:</label>
-          <textarea id="body" type="text" name="body" placeholder="Dear diary..." rows="6" required></textarea>
+    <form action='/post-blog' method='post'>
+        <label for="title">Post title:</label>
+        <input id="title" type="text" name="title" placeholder="My blog title" required>
+        <label for="body">Blog body:</label>
+        <textarea id="body" type="text" name="body" placeholder="Dear diary..." rows="6" required></textarea>
 
-          <button type='submit'>Post</button>
+        <button type='submit'>Post</button>
 
+    </form>
 
+    <a href='/'>I, {{credentials.username}}, want to go back to the home page</a>
 
-</form>
-
-
-
-<a href='/'>I, {{credentials.username}}, want to go back to the home page</a>
-
-<form action='/logout' method='GET'>
-    <button type='submit'>logout</button>
-</form>
+    <form action='/logout' method='GET'>
+        <button type='submit'>logout</button>
+    </form>
 </body>
+
 </html>
