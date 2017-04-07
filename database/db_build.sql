@@ -3,18 +3,18 @@ BEGIN;
 DROP TABLE IF EXISTS users, posts;
 
 CREATE TABLE users (
-  user_id          serial        PRIMARY KEY,
-  username        varchar(100)  NOT NULL,
-  password        varchar(100)  NOT NULL,
-  isAdmin         BOOLEAN       NOT NULL
+  user_id         SERIAL          PRIMARY KEY,
+  username        VARCHAR(100)    NOT NULL,
+  password        VARCHAR(100)    NOT NULL,
+  isAdmin         BOOLEAN         NOT NULL
 );
 
 CREATE TABLE posts (
-  post_id         serial          PRIMARY KEY,
-  title           varchar(50)     NOT NULL,
-  body            varchar(500)    NOT NULL,
-  date            date            NOT NULL,
-  user_id         integer         REFERENCES users(user_id)
+  post_id         SERIAL          PRIMARY KEY,
+  title           VARCHAR(50)     NOT NULL,
+  body            VARCHAR(5000)   NOT NULL,
+  date            DATE            NOT NULL,
+  user_id         INTEGER         REFERENCES users(user_id)
 );
 
 -- 1 TO MANY
