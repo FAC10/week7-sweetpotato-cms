@@ -10,5 +10,9 @@
 <h1>Welcome {{credentials.username}}!</h1>
 
 <a href='/'>I, {{credentials.username}}, want to go back to the home page</a>
+
+<form action='/logout' method='GET'>
+    <button type='submit'>logout</button>
+</form>
 </body>
 </html>

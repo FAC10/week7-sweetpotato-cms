@@ -15,7 +15,6 @@ const loginPage = {
   method: 'GET',
   path: '/login-page',
   handler: (req, reply) => {
-    console.log(req.auth.credentials);
     reply.view('login-page');
   },
 };
@@ -47,7 +46,6 @@ const createPost = {
   method: 'GET',
   path: '/create-post',
   handler: (req, reply) => {
-    console.log(req.auth.credentials);
     if (req.auth.isAuthenticated) {
       reply.view('create-post', {
         credentials: req.auth.credentials,
@@ -58,10 +56,20 @@ const createPost = {
   },
 };
 
+const logout = {
+  method: 'GET',
+  path: '/logout',
+  handler: (req, reply) => {
+    req.cookieAuth.clear();
+    reply.redirect('/');
+  },
+};
+
 
 module.exports = [
   home,
   loginPage,
   login,
   createPost,
+  logout,
 ];
