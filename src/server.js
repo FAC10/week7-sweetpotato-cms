@@ -27,7 +27,11 @@ server.register([inert, vision, hapiAuth, cookieAuth], (err) => {
 
   server.views({
     engines: { hbs: Handlebars },
-    path: './src/views',
+    path: 'views',
+    layout: 'default',
+    layoutPath: 'views/layouts',
+    partialsPath: 'views/partials',
+    // helpersPath: 'views/helpers',
   });
 
 
