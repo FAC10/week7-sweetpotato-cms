@@ -9,8 +9,6 @@ if (!process.env.DATABASE_URL) {
 }
 
 const params = url.parse(process.env.DATABASE_URL);
-console.log(process.env.DATABASE_URL);
-console.log(params);
 const [username, password] = params.auth.split(':');
 
 const options = {
