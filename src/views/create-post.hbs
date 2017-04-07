@@ -7,6 +7,26 @@
   <title>Document</title>
 </head>
 <body>
-<h1>Welcome {{credentials.name}}!</h1>
+<h1>Welcome {{credentials.username}}!</h1>
+
+<form action='/post-blog' method='post'>
+  <label for="title">Post title:</label>
+      <input id="title" type="text" name="title" placeholder="My blog title" required>
+  <label for="body">Blog body:</label>
+          <textarea id="body" type="text" name="body" placeholder="Dear diary..." rows="6" required></textarea>
+
+          <button type='submit'>Post</button>
+
+
+
+</form>
+
+
+
+<a href='/'>I, {{credentials.username}}, want to go back to the home page</a>
+
+<form action='/logout' method='GET'>
+    <button type='submit'>logout</button>
+</form>
 </body>
 </html>
