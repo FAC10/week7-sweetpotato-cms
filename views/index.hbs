@@ -1,0 +1,18 @@
+{{> header}}
+
+
+<div>
+{{#each posts}}
+  {{> post-template}}
+{{/each}}
+</div>
+
+
+
+
+
+<a href='./create-post'>do a blog post for much win</a>
+</br>
+<form action='/logout' method='GET'>
+    <button type='submit'>logout</button>
+</form>

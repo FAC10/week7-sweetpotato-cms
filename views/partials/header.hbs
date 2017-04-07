@@ -1,0 +1,8 @@
+<header class='container header'>
+    <h1>Welcome to our blog</h1>
+    {{#if credentials.username}}
+        <h2>Hi {{credentials.username}}</h2>
+    {{else}}
+        <h2>Hello person I don't konw</h2>
+    {{/if}}
+</header>
