@@ -1,6 +1,5 @@
-const dbConnection = require('../database/db_connection.js');
-const bcrypt = require('bcrypt');
 const addPost = require('./addPost.js');
+const loginFunc = require('./login.js');
 
 
 const home = {
@@ -24,24 +23,7 @@ const loginPage = {
 const login = {
   method: 'POST',
   path: '/login',
-  handler: (req, reply) => {
-    const username = req.payload.username;
-    const password = req.payload.password;
-
-    dbConnection.query(`SELECT * from users WHERE users.username = '${username}';`, (err, res) => {
-      if (err) throw err;
-      const user = res.rows[0];
-      bcrypt.compare(password, user.password, (err, isValid) => {
-        if (err) throw err;
-        if (isValid) {
-          req.cookieAuth.set({ username });
-          reply.redirect('/create-post');
-        } else {
-          reply.view('failed-login');
-        }
-      });
-    });
-  },
+  handler: loginFunc,
 };
 
 const createPost = {
