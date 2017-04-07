@@ -1,5 +1,7 @@
 const dbConnection = require('../database/db_connection.js');
 const bcrypt = require('bcrypt');
+const addPost = require('./addPost.js');
+
 
 const home = {
   method: 'GET',
@@ -56,6 +58,12 @@ const createPost = {
   },
 };
 
+const postBlog = {
+  method: 'POST',
+  path: '/post-blog',
+  handler: addPost,
+};
+
 const logout = {
   method: 'GET',
   path: '/logout',
@@ -72,4 +80,5 @@ module.exports = [
   login,
   createPost,
   logout,
+  postBlog,
 ];
